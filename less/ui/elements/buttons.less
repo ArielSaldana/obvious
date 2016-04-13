@@ -1,0 +1,64 @@
+button {
+    background: transparent;
+}
+
+.ui.button {
+    display:inline-block;
+    cursor: pointer;
+    outline:none;
+    border:none;
+    vertical-align: baseline;
+    margin: 0em 0.25em 0em 0em;
+    padding: 1.25em 3em 1.25em;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 500rem;
+    color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+    user-select: none;
+    transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    will-change: '';
+    -webkit-tap-highlight-color: transparent;
+    position:relative;
+    font-size:1.4rem;
+}
+
+.ui.button, .ui.button svg {
+     transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.ui.button:hover {
+    background-color:rgb(123, 70, 232);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2) inset;
+    color: rgb(255, 255, 255);
+    
+}
+
+.ui.button:hover svg {
+    fill: white;
+}
+
+.ui.button .button--icon {
+    // vertical-align: -webkit-baseline-middle;
+    display:inline-block;
+    position:absolute;
+    
+}
+
+.ui.button .button--icon-text {
+    padding-left:26px;
+    
+}
+
+.ui.plain.button {
+    background: transparent none !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+    font-weight: normal;
+    border-radius: 500rem;
+    text-transform: none;
+    text-shadow: none !important;
+    box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15);
+}
+

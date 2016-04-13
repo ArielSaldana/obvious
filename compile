@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#to the github project
+lessc less/obvious.less > css/obvious.min.css --clean-css="--s1 --compatibility=ie8 --advanced"

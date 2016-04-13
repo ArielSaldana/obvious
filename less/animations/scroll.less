@@ -1,0 +1,15 @@
+html.obvious-scroll-js *[data-ix="float-in-from-left"] {
+  opacity: 0;
+  -webkit-transform: translate(-200px, 0px);
+  -ms-transform: translate(-200px, 0px);
+  transform: translate(-200px, 0px);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+html.obvious-scroll-js *[data-ix="float-in-from-right"] {
+  opacity: 0;
+  -webkit-transform: translate(200px, 0px);
+  -ms-transform: translate(200px, 0px);
+  transform: translate(200px, 0px);
+  transition: opacity 1000ms, transform 1000ms;
+}

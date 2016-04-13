@@ -1,0 +1,41 @@
+/*padding REMEBER* doesn't auto collapse. two items with 20px padding top/bottom is 40px space between both.
+Padding is part of the content so it extends width and height and click region*/
+.setPadding (@paddingTB;@paddingRL){
+  padding: @paddingTB @paddingRL;
+}
+
+.setPadding (@paddingTop:0; @paddingRight:0; @paddingBottom:0; @paddingLeft:0){
+  padding: @paddingTop @paddingRight @paddingBottom @paddingLeft;
+}
+
+/*margin  REMEMBER* this auto collapse. two items with 20px padding top/bottom is 20px space between both because of the collapse.
+NOT part of content**/
+.setMargin(@marginTB;@marginRL){
+  margin: @marginTB @marginRL;
+}
+
+.setMargin (@marginTop:0;@marginRight:0;@marginBottom:0;@marginLeft:0){
+  margin: @margingTop @marginRight @marginBottom @marginLeft;
+}
+
+/*border radius*/
+.border-radius(@radius:5px){
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/*shadow*/
+.shadow(@x:0;@y:0;@blur:1px;@color:#000){
+  -webkit-box-shadow: @arguments;
+      moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+
+/*text wrap ex: pre {.wrap}*/
+.wrap(){
+  text-wrap: wrap;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

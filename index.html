@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+      <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      <title>Obvious</title>
+
+      <link rel="stylesheet" href="./css/obvious.min.css">
+    </head>
+    <body>
+        <div style="padding:20px;">
+        <section id="buttons">
+            <h2>Buttons</h2>
+            <h4>Plain Buttons</h4>
+            <div style="margin-bottom:40px;">
+                <span class="ui primary button">
+                    Request a Demo
+                </span>
+                
+                <button class="ui primary button">
+                    Request a Demo
+                </button>
+            </div>
+            <h4>With Icons</h4>
+            <div style="margin-bottom:40px;">
+                <div class="ui primary button">
+                    
+                    <div style="height:22px;line-height:22px;">
+                    <span class="button--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 8 8">
+  <path d="M3 0l-3 5h2v3l3-5h-2v-3z" transform="translate(1)" />
+</svg>
+                    </span>
+                    <span class="button--icon-text">Request a Demo</span>
+                    </div>
+                </div>
+                
+                <button class="ui primary button">
+                    Request a Demo
+                </button>
+            </div>
+        </section>
+        <section>
+            <h2>Forms</h2>
+            <h4>plain form</h4>
+            <div style="max-width:720px;">
+            <form id="ui-form" ui-bind-submit="submitform" class="ui" action="" method="post">
+                <div>
+                    <div class="row" style="margin-bottom:20px;">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field">
+                                <label for="">Enter your first name</label>
+                                <div class="ui input">
+                                    <input type="text" placeholder="First Name">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field">
+                                <label for="">Enter your last name</label>
+                                <div class="ui input">
+                                    <input type="text" placeholder="Last Name">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:20px">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field">
+                                <label for="">Enter your email</label>
+                                <div class="ui input">
+                                    <input type="email" placeholder="you@email.com">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field">
+                                <label for="">Enter your Password</label>
+                                <div class="ui input">
+                                    <input type="password" placeholder="password">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:20px;">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field">
+                                <label for="">select a business category</label>
+                                <div class="ui input">
+                                    <div>
+                                        <select name="categories" id="">
+                                            <option selected="selected" value="" disabled="">Please select…</option>
+                                            <option value="beauty_and_personal_care">Beauty and Personal Care</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="field">
+                                <label for="">Company Phone Number</label>
+                                <div class="ui input">
+                                    <input type="tel" maxlength="12" placeholder="000-000-0000">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="field">
+                                <label for="">Write a message for us here:</label>
+                                <div class="ui input">
+                                    <!--<input type="tel" placeholder="Message...">-->
+                                    <textarea placeholder="Message..."></textarea>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div style="text-align:center;margin-top:40px;">
+            <button id="submitform" class="ui primary button" type="submit" form="form1" value="Submit">Request Information</button>
+            </div>
+            </div>
+        </section>
+        </div>
+        <script src="./js/pan-0.3.min.js"></script>
+        
+        <script>
+P.Components.form = P.Core.Abstract.extend(
+{
+
+    /**
+     * Initialise and merge options
+     * @constructor
+     * @param {object} options Properties to merge with defaults
+     * TODO: object in javascript map, might be worth it to traverse a map with the parent as a value
+     */
+    
+    
+    construct : function( options )
+    {
+        this.fields = options.form.getElementsByClassName("field");
+        this.tels = options.form.querySelectorAll("input[type=tel]");
+        this.emails = options.form.querySelectorAll("input[type=email]");
+        
+        
+        this.listen_to_events();
+    },
+    
+    triggerError : function(e) {
+        var that = this;
+        // console.log(this.fields);
+        // console.log(e.type);
+        [].forEach.call(this.fields, function (el) {
+            if (el.contains(e)) {
+                el.classList.add("error");
+            }
+        });
+        
+    },
+    
+    removeError : function(e) {
+        [].forEach.call(this.fields, function (el) {
+            if (el.contains(e)) {
+                el.classList.remove("error");
+            }
+        });
+    },
+    
+    isDescendant : function(parent, child) {
+        var node = child.parentNode;
+        while (node != null) {
+            if (node == parent) {
+                return true;
+            }
+            node = node.parentNode;
+        }
+        return false;
+    },
+    
+    listen_to_events : function() {
+        var that = this;
+        
+        // check email inputs
+       
+        [].forEach.call(
+            this.emails, function(e) {
+                e.addEventListener('focus', function(){
+                    
+                }),
+                e.addEventListener('blur', function(){
+                    // move this to a global scope??
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    
+                    if (re.test(e.value)) {
+                        that.removeError(e);
+                        // that.triggerError(e);
+                    }
+                    else {
+                        // error validating email
+                        that.triggerError(e);
+                    }
+                    
+                })
+            }
+        );
+        
+        // telephone inputs
+        
+        [].forEach.call(
+            this.tels, function(e) {
+                e.addEventListener('focus', function(){
+                    console.log("FOCUSED");
+                }, false),
+                e.addEventListener('blur', function(){
+                    var re = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+                    
+                    if (re.test(e.value)) {
+                        that.removeError(e);
+                    }
+                    
+                    else {
+                        that.triggerError(e);
+                    }
+                }),
+                // input event.. but we'll support older browsers
+                e.addEventListener('keydown', function(event) {
+                    
+                    // track the code for the key pressed
+                    
+                    var key = event.keyCode || event.charCode;
+                    
+                    if (key == 8 || key == 46) {
+                        if (e.value.length == 4 || e.value.length == 8) {
+                            e.value = e.value.substring(0, e.value.length - 1);
+                        }
+                    }
+                    else {
+                        return;
+                    }
+                }),
+                e.addEventListener('input', function(){
+                    if (e.value.length == 3 || e.value.length == 7) {
+                        e.value += "-";
+                        }
+                });
+            }
+        );
+    }
+} );
+
+        </script>
+        
+        
+        <script>
+            var f = document.getElementById("ui-form");
+            var uiForm = new Pan.Components.form({ form : f});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+// Dropping support for this in future versions.
+// As Browsers adopt flexbox and grid for layouts
+// We don't need hacky floats.
+
+article,aside,article#test,header,ul.tabs {
+  //.cf();
+  .clearfix();
+}
+
+
+
+div#container,div#content {
+  .cf();
+}
+
+.wrapper:before, .nav:before{
+  display:table;
+  content: " ";
+}

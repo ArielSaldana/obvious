@@ -1,0 +1,102 @@
+// Responsive
+// @desktop:   ~"screen and (min-width: 960px) and (max-width: 1199px)";
+// @tablet:    ~"screen and (min-width: 720px) and (max-width: 959px)";
+
+/* deprecated - only major change was the gap between mobile and
+   what's considered a "table" sized screen. I also added the ONLY
+   keyword so older user agents can ignore the style altogether.
+
+   keeping the code commented out for reference.
+
+@res-ls:  ~ "screen and (min-width:1200px)"; // Large Desktops
+@res-ms:  ~ "screen and (min-width:992px)";  // Poor souls who use win xp
+@res-ss:  ~ "screen and (min-width: 768px)"; // tablets
+@res-xs:  ~ "screen and (max-width:480px)";  // this will be the default.
+ *
+ */
+
+/* new grid system that leaves no awkward gaps*/
+// @ls:  ~ "only screen and (min-width:1200px)"; // Large Desktops
+// @ms:  ~ "only screen and (min-width:1024px)";  // Poor souls who use win xp
+// @ts:  ~ "only screen and (min-width:770px)";  // ipads? plus.. inbetween?
+// @ss:  ~ "only screen and (min-width: 481px)"; // tablets
+// @xs:  ~ "only screen and (max-width:480px)";  // this will be the default.
+
+
+@xs: ~ "only screen and (min-width: 34em)"; // xtra small devices
+@sm: ~ "only screen and (min-width: 48em)"; // small devices
+@md: ~ "only screen and (min-width: 62em)"; // tabless less than 62em
+@lg: ~ "only screen and (min-width: 75em)"; // large devices
+@xl: ~ "only screen and (min-width: 90em)"; // xtra large devices
+
+// z-index scale
+@zIndex-1:   100;
+@zIndex-2:   200;
+@zIndex-3:   300;
+@zIndex-4:   400;
+@zIndex-5:   500;
+@zIndex-6:   600;
+@zIndex-7:   700;
+@zIndex-8:   800;
+@zIndex-9:   900;
+@zIndex-10: 1000;
+
+
+@primary-Font: 0; // null
+@secondary-font: "medium-content-serif-font",Georgia,Cambria,"Times New Roman",Times,serif;
+
+@ui-primary-font: 'unreal-content-primary','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif;
+@ui-secondary-font: 'unreal-content-secondary', Arial, Helvetica, sans-serif;
+
+// Font sizes
+@default-text-size:    10px;
+@font-size-base:        1em;
+@header-text:         2.4em;
+@mobile-text-size:    0.8em;
+@body-text-size:        1em;
+
+@headings-font-family: inherit;
+@headings-font-weight: 500;
+@headings-line-height: 1.4em;
+@headings-margin: 0;
+@headings-color: inherit;
+
+@content-font-family: inherit;
+@content-font-weight: 300;
+@content-line-height: 1.4em;
+@content-margin: 0;
+@content-color: inherit;
+
+
+/*@font-size-h1:            @font-size-base * 4.8; // 48px
+@font-size-h2:            @font-size-base * 3.6; // ~36px
+@font-size-h3:            @font-size-base * 2.4; // ~24px
+@font-size-h4:            @font-size-base * 1.8; // ~18px
+@font-size-h5:            @font-size-base;  // ~10px
+@font-size-h6:            @font-size-base * 0.85; // ~godknows*/
+
+@font-s-h1:       @font-size-base * 3.6;
+@font-s-h2:       @font-size-base * 3.0;
+@font-s-h3:       @font-size-base * 2.4;
+@font-s-h4:       @font-size-base * 1.8;
+@font-s-h5:       @font-size-base;
+@font-s-h6:       @font-size-base * 0.85;
+@font-size-h1:            @font-size-base * 3.6; // 48px
+@font-size-h2:            @font-size-base * 3.0; // ~36px
+@font-size-h3:            @font-size-base * 2.4; // ~24px
+@font-size-h4:            @font-size-base * 1.8; // ~18px
+@font-size-h5:            @font-size-base;  // ~10px
+@font-size-h6:            @font-size-base * 0.85; // ~godknows
+
+// Font weights
+@font-light:  100;
+@font-medium: 500;
+@font-bold:   700;
+
+// layout
+@wrapper-max: 110rem;
+
+// override default root browser settings, like highlig color
+/* perhaps moving this to theme.less would be a good idea */
+@selectionColor: @white;
+@selectionBackgroundColor: rgb(123, 70, 232);

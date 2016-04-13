@@ -1,0 +1,50 @@
+.textInput {
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 0 15px;
+    height: 35px;
+    width: 55%;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    appearance: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: "obvious-ui-font","obvious-content-sans-serif-font","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0,0,0,0.6);
+
+
+    -webkit-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -moz-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -ms-transition: border 0.3s ease-out, color 0.3s ease 0.5s; /* IE10 is actually unprefixed */
+    -o-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+
+
+
+}
+
+.textInput:active {
+    border: 1px solid rgba(0,0,0,0.35);
+    color: rgba(0,0,0,0.8);
+
+    // border: 1px solid rgba(87, 173, 104, 1);
+    // color: rgba(87, 173, 104, 1);
+}
+
+.textInput:focus {
+  border: 1px solid rgba(0,0,0,0.35);
+  color: rgba(0,0,0,0.8);
+  // border: 1px solid rgba(87, 173, 104, 1);
+  // color: rgba(87, 173, 104, 1);
+}
+
+.textInput--narrow {
+    width: 255px;
+}
+
+a, button, input {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

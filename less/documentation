@@ -1,0 +1,7 @@
+lessc unreal.less > ../css/style.css
+
+we now use
+
+lessc unreal.less > ../css/style.css --clean-css="--s1 --advanced --compatibility=ie8"
+
+to clean up redundant queries

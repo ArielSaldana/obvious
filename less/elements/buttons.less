@@ -1,0 +1,84 @@
+.button, .button .icon:before, .button .svgIcon {
+    transition: 100ms background-color,100ms border-color,100ms color,100ms fill;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    height: 37px;
+    padding: 0 16px;
+    color: rgba(0,0,0,0.44);
+    background: rgba(0,0,0,0);
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.15);
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-rendering: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    border-radius: 999em;
+    font-family: "medium-ui-font","medium-content-sans-serif-font","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+}
+a, button, input {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.buttonSet>.button, .buttonSet>.buttonSet-inner>.button {
+    /* margin-right: 8px; */
+    /* vertical-align: middle; */
+}
+.button, .button.button--truncated .icon {
+    line-height: 36px;
+}
+
+.button--primary {
+    border-color: #a9d8b2;
+}
+.button--primary, .button--primary.button--link, .button--primary .label, .button--primary .icon:before {
+    color: #57ad68;
+}
+
+.button:hover {
+    color: rgba(0,0,0,0.6);
+    border-color: rgba(0,0,0,0.3);
+}
+
+.button--primary:hover {
+    border-color: #57ad68;
+    color: #468c54;
+}
+
+
+
+.button>.button-activeState {
+    display: none;
+}
+
+.button--primary:focus, .button--primary:active, .button--primary:hover {
+    border-color: #57ad68;
+    color: #468c54;
+}
+
+.button>.button-defaultState, .button.is-active>.button-activeState {
+    display: inline;
+}
+
+.button--small {
+    height: 32px;
+    line-height: 31px;
+    padding: 0 14px;
+    font-size: 12px;
+}
