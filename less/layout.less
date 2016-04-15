@@ -1,0 +1,82 @@
+/**
+ * @file    layout.less
+ * @author  Ariel Saldana / http://ariel.io
+ * copyright (c) 2016 - unreal labs
+ * 
+ * Controls the grid system used by this framework
+ */
+
+
+// grid system settings
+
+@columns : 12;
+@gutter : 0%;
+@space : 100% - (@columns * @gutter);
+
+[class*="col-"] {
+    float:left;
+    width: 100%;
+    
+    margin-left:@gutter;
+    margin-bottom:@gutter;
+    
+    padding-left: 1.5rem;
+    padding-right:1.5rem;
+    transition:all 0.3s linear;
+}
+
+
+// fixed container
+
+.container {
+    .clearfix();
+    width:auto;
+}
+
+// full width container, centers content.
+
+.container-fluid {
+    .clearfix();
+    width:100%;
+}
+
+// horizontal clearfixed, holds columns. 
+
+.row {
+    margin-left: -@gutter;
+    .clearfix();
+}
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// loop function 
+
+.loop(@counter, @media) when (@counter > 0) {
+	.loop((@counter - 1), @media);
+	.col-@{media}-@{counter}{
+		width: (@space / @columns * @counter) + (@gutter * (@counter - 1));
+	}
+}
+
+@media @xs {
+	.loop(@columns, xs);
+}
+@media @sm {
+	.loop(@columns, sm);
+}
+@media @md {
+	.loop(@columns, md);
+}
+@media @lg {
+	.loop(@columns, lg);
+}
+@media @xl {
+	.loop(@columns, xl);
+}
+
+

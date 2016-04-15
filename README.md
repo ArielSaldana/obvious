@@ -1,5 +1,4 @@
 # Obvious
-[![Build Status](https://img.shields.io/travis/twbs/bootstrap/master.svg)](https://travis-ci.org/arielsaldana/obvious)
 
 Obvious Less Framework
 
@@ -16,6 +15,9 @@ Obvious Less Framework
 ## Quick start
 
 - Clone the repo: `git clone https://github.com/arielsaldana/obvious.git`.
+
+- To compile use the command lessc unreal.less > ../css/style.css
+to minimize the css output use : lessc unreal.less > ../css/style.css --clean-css="--s1 --advanced --compatibility=ie8"
 
 ### What's included
 

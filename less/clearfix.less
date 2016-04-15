@@ -1,16 +1,17 @@
-// Dropping support for this in future versions.
-// As Browsers adopt flexbox and grid for layouts
-// We don't need hacky floats.
+/**
+ * @file    clearfix.less
+ * @author  Ariel Saldana / http://ariel.io
+ * copyright (c) 2016 - unreal labs
+ * todo : put this in the mixins.. 
+ */
+
 
 article,aside,article#test,header,ul.tabs {
-  //.cf();
   .clearfix();
 }
 
-
-
 div#container,div#content {
-  .cf();
+  .clearfix();
 }
 
 .wrapper:before, .nav:before{

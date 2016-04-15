@@ -1,5 +1,16 @@
+/**
+ * @file    base.less
+ * @author  Ariel Saldana / http://ariel.io
+ * copyright (c) 2016 - unreal labs
+ */
+
 html {
     font-size: @default-text-size;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -10,3 +21,28 @@ body {
 	-moz-osx-font-smoothing: grayscale;
     font-family: 'proxima-nova', sans-serif;
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: @selectionColor;
+    background: @selectionBackgroundColor;
+}
+
+::selection {
+    color: @selectionColor;
+    background: @selectionBackgroundColor;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover
+{
+    //  color:#0487B5;
+     outline:0;
+     text-decoration:none;
+     cursor:pointer;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
