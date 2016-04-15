@@ -25,16 +25,18 @@ button {
     font-size:1.4rem;
 }
 
-.ui.button, .ui.button svg {
-     transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-}
-
 .ui.button:hover {
     background-color:rgb(123, 70, 232);
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2) inset;
     color: rgb(255, 255, 255);
     
 }
+
+.ui.button, .ui.button svg {
+     transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+
 
 .ui.button:hover svg {
     fill: white;
@@ -62,3 +64,109 @@ button {
     box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.15);
 }
 
+
+
+// material design 
+
+
+
+
+section {
+  padding: 30px 25px;
+}
+
+section > * {
+  margin: 10px
+}
+
+
+/* Button */
+
+ui.material.button {
+  display: inline-block;
+  position: relative;
+//   width: 120px;
+//   height: 32px;
+  line-height: 32px;
+  border-radius: 2px;
+  font-size: 0.9em;
+  background-color: #fff;
+  color: #646464;
+}
+
+.button > paper-ripple {
+  border-radius: 2px;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.button.narrow {
+  width: 60px;
+}
+
+.button.grey {
+  background-color: #eee;
+}
+
+.button.blue {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.button.green {
+  background-color: #0f9d58;
+  color: #fff;
+}
+
+.button.raised {
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.button.raised:active {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  transition-delay: 0s;
+}
+
+
+/* Icon Button */
+
+.icon-button {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+}
+
+.icon-button > core-icon {
+  margin: 16px;
+  transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-button:hover > core-icon {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.icon-button > paper-ripple {
+  overflow: hidden;
+  color: #646464;
+}
+
+.icon-button.red > core-icon::shadow path {
+  fill: #db4437;
+}
+
+.icon-button.red > paper-ripple {
+  color: #db4437;
+}
+
+.icon-button.blue > core-icon::shadow path {
+  fill: #4285f4;
+}
+
+.icon-button.blue > paper-ripple {
+  color: #4285f4;
+}
