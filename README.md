@@ -36,6 +36,7 @@ Or if you'd like you minify the css file..<br>
 ### Via nodeJs
 
 * Installing neccesary modules
+
 To get node to install the neccesary modules run `npm i` from the root directory
 
 * Running the project
