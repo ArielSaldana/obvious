@@ -16,8 +16,9 @@ Obvious Less Framework
 
 - Clone the repo: `git clone https://github.com/arielsaldana/obvious.git`.
 
-- To compile use the command lessc unreal.less > ../css/style.css
-to minimize the css output use : lessc unreal.less > ../css/style.css --clean-css="--s1 --advanced --compatibility=ie8"
+- To compile use the command `lessc unreal.less > ../css/style.css`
+- alternatively, if you'd like to minimize the file you can do `lessc unreal.less > ../css/style.css --clean-css="--s1 --advanced --compatibility=ie8"`;
+
 
 ### What's included
 
