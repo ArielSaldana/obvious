@@ -1,3 +1,7 @@
 #!/bin/bash
 
-lessc less/obvious.less > css/obvious.min.css --clean-css="--s1 --compatibility=ie8 --advanced"
+
+#lessc unreal.less > ../css/unreal.css --clean-css="--compatibility=ie8 --advanced"
+
+node node_modules/less/bin/lessc less/obvious.less > css/obvious.css
+node node_modules/clean-css/bin/cleancss css/obvious.css > css/obvious.min.css
