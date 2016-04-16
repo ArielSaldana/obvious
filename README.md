@@ -15,9 +15,23 @@ Obvious Less Framework
 ## Quick start
 
 - Clone the repo: `git clone https://github.com/arielsaldana/obvious.git`.
+- 
 
-- To compile use the command `lessc unreal.less > ../css/style.css`
-- alternatively, if you'd like to minimize the file you can do `lessc unreal.less > ../css/style.css --clean-css="--s1 --advanced --compatibility=ie8"`;
+- To compile you need to have nodeJS installed. Run the command :
+
+`npm -g i less && npm -g i clean-css`
+
+
+
+- compiling command `lessc unreal.less > ../css/style.css`
+- alternatively, if you'd like to minimize the file you can do 
+```lessc unreal.less > ../css/style.css --clean-css="--s1 --advanced --compatibility=ie8"```
+
+- To compile via node do `npm i` to install the required prerequisites
+
+and then do `node index.js`
+
+- Compiled css can be found under css/
 
 
 ### What's included
@@ -27,10 +41,14 @@ Within the download you'll find the following directories and files, logically g
 ```
 obvious/
 ├── css/
-│   ├── obvious.min.css
+│   ├── obvious.css
+|   ├── obvious.min.css
 ├── js/
-│   ├── obvious.js
-│   └── obvious.min.js
+│   ├── lib/
+|   |   ├── pan.js
+|   |   └── pan.min.js
+|   ├── ui.form.class.js
+│   └── ui.mateterial.class.js
 └── fonts/
     ├── glyphicons-halflings-regular.eot
     ├── glyphicons-halflings-regular.svg
