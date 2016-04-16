@@ -15,7 +15,6 @@ Obvious Less Framework
 ## Quick start
 
 - Clone the repo: `git clone https://github.com/arielsaldana/obvious.git`.
-- 
 
 - To compile you need to have nodeJS installed. Run the command :
 
