@@ -12,37 +12,25 @@ Obvious Less Framework
 - [Creators](#creators)
 - [Copyright and license](#copyright-and-license)
 
-## Usage
+## Quick start
 
-There are two ways of using obvious.<br>
-Clone the repo: `git clone https://github.com/arielsaldana/obvious.git`.
+- Clone the repo: `git clone https://github.com/arielsaldana/obvious.git`.
 
-### Via the command line by globally installing the required tools.
+- To compile you need to have nodeJS installed. Run the command :
 
-* Globally installing the neccesary tools
+`npm -g i less && npm -g i clean-css`
 
-`
-npm -g i less && npm -g i clean-css
-`
 
-* Compiling
 
-`lessc obvious.less > ../css/style.css`
+- compiling command `lessc unreal.less > ../css/style.css`
+- alternatively, if you'd like to minimize the file you can do 
+```lessc unreal.less > ../css/style.css --clean-css="--s1 --advanced --compatibility=ie8"```
 
-Or if you'd like you minify the css file..<br>
+- To compile via node do `npm i` to install the required prerequisites
 
-`lessc obvious.less > ../css/obvious.min.css --clean-css="--s1 --advanced --compatibility=ie8"`
+and then do `node index.js`
 
-### Via nodeJs
-
-* Installing neccesary modules
-To get node to install the neccesary modules run `npm i` from the root directory
-
-* Running the project
-
-Run the project via `node index.js`
-
-Any compiled css can be found under css/
+- Compiled css can be found under css/
 
 
 ### What's included
