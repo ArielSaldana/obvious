@@ -64,20 +64,113 @@
 	}
 }
 
-@media @xs {
+@media @min-xs {
 	.loop(@columns, xs);
 }
-@media @sm {
+@media @min-sm {
 	.loop(@columns, sm);
 }
-@media @md {
+@media @min-md {
 	.loop(@columns, md);
 }
-@media @lg {
+@media @min-lg {
 	.loop(@columns, lg);
 }
-@media @xl {
+@media @min-xl {
 	.loop(@columns, xl);
 }
 
+
+// responsive utilities
+
+.visible-phone {
+    display:none;
+    @media @xs {
+        display:inherit;
+    }
+}
+
+.visible-tablet {
+    display:none;
+    @media @sm {
+        display:inherit;
+    }
+}
+
+.visible-small-desktop {
+    display:none;
+    @media @md {
+        display:inherit;
+    }
+}
+
+.visible-desktop {
+    display:none;
+    @media @lg {
+        display:inherit;
+    }
+}
+
+// this is the default..no point?
+.show-xs {
+    
+}
+
+.show-sm {
+    display:none;
+    @media @min-sm {
+        display:inherit;
+    }
+}
+
+.show-md {
+    display:none;
+    @media @min-md {
+        display:inherit;
+    }
+}
+
+.show-lg {
+    display:none;
+    @media @min-lg {
+        display:inherit;
+    }
+}
+
+.show-xl {
+    display:none;
+    @media @min-xl {
+        display:inherit;
+    }
+}
+
+.hide-xs {
+    
+}
+
+.hide-sm {
+    @media @min-sm {
+       display:none; 
+    }
+}
+
+.hide-md {
+    @media @min-md {
+       display:none; 
+    }
+}
+
+.hide-lg {
+    @media @min-lg {
+       display:none; 
+    }
+}
+
+
+// hide / show 
+/*
+ * - hide-ms should hide content sized ms and greater
+ *
+ *
+ */
 

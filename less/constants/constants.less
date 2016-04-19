@@ -5,15 +5,29 @@
  * https://github.com/arielsaldana/pan/blob/dev/LICENSE.txt
  */
 
-// Responsive
-// @desktop:   ~"screen and (min-width: 960px) and (max-width: 1199px)";
-// @tablet:    ~"screen and (min-width: 720px) and (max-width: 959px)";
 
-@xs: ~ "only screen and (min-width: 34em)"; // xtra small devices
-@sm: ~ "only screen and (min-width: 48em)"; // small devices
-@md: ~ "only screen and (min-width: 62em)"; // tabless less than 62em
-@lg: ~ "only screen and (min-width: 75em)"; // large devices
-@xl: ~ "only screen and (min-width: 90em)"; // xtra large devices
+//phones are between 320px - 480 naturally
+//tablets are between 768 - 1024 naturally / ipads
+
+// min
+@min-xs: ~ "only screen and (min-width: 20em)"; //phones, min width 320 px
+@min-sm: ~ "only screen and (min-width: 48em)"; //tables, min width 768 px
+@min-md: ~ "only screen and (min-width: 64em)"; //small desktops,  1024 px
+@min-lg: ~ "only screen and (min-width: 90em)";   // large desktops  1440 px
+@min-xl: ~ "only screen and (min-width: 160em)"; // 4k 2560px
+
+// max
+@max-xs: ~ "(max-width: 48em)";
+@max-sm: ~ "(max-width: 64em)"; 
+@max-md: ~ "(max-width: 90em)"; 
+@max-lg: ~ "(max-width: 160em)"; 
+
+// range
+@xs : ~ "only screen and (min-width: 20em ) and (max-width: 47.9375em)";
+@sm : ~ "only screen and (min-width: 48em) and (max-width: 63.9375em)";
+@md : ~ "only screen and (min-width: 64em) and (max-width: 98.9375em)";
+@lg : ~ "only screen and (min-width: 90em) and (max-width: 159.9375em)";
+@xl : ~ "";
 
 // z-index scale
 @zIndex-1:   100;
@@ -27,16 +41,12 @@
 @zIndex-9:   900;
 @zIndex-10: 1000;
 
-
-@primary-Font: 0; // null
-@secondary-font: "medium-content-serif-font",Georgia,Cambria,"Times New Roman",Times,serif;
-
-@ui-primary-font: 'unreal-content-primary','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif;
-@ui-secondary-font: 'unreal-content-secondary', Arial, Helvetica, sans-serif;
+@ui-primary-font: 'proxima-nova', sans-serif;
+@ui-seconday-font: '';
 
 // Font sizes
-@default-text-size:    10px;
-@font-size-base:        1em;
+@default-text-size:    16px;
+@font-size-base:        1rem;
 @header-text:         2.4em;
 @mobile-text-size:    0.8em;
 @body-text-size:        1em;
@@ -53,36 +63,21 @@
 @content-margin: 0;
 @content-color: inherit;
 
+// mobile first type sizes
+@font-h1 : @font-size-base * 2;         // 32px
+@font-h2 : @font-size-base * 1.75;      // 28px
+@font-h3 : @font-size-base * 1.5;       // 24px
+@font-h4 : @font-size-base * 1.125;     // 18px
+@font-h5 : @font-size-base * 1;         // 16px
+@font-h6 : @font-size-base * 0.875;     // 14px
 
-/*@font-size-h1:            @font-size-base * 4.8; // 48px
-@font-size-h2:            @font-size-base * 3.6; // ~36px
-@font-size-h3:            @font-size-base * 2.4; // ~24px
-@font-size-h4:            @font-size-base * 1.8; // ~18px
-@font-size-h5:            @font-size-base;  // ~10px
-@font-size-h6:            @font-size-base * 0.85; // ~godknows*/
-
-@font-s-h1:       @font-size-base * 3.6;
-@font-s-h2:       @font-size-base * 3.0;
-@font-s-h3:       @font-size-base * 2.4;
-@font-s-h4:       @font-size-base * 1.8;
-@font-s-h5:       @font-size-base;
-@font-s-h6:       @font-size-base * 0.85;
-@font-size-h1:            @font-size-base * 3.6; // 48px
-@font-size-h2:            @font-size-base * 3.0; // ~36px
-@font-size-h3:            @font-size-base * 2.4; // ~24px
-@font-size-h4:            @font-size-base * 1.8; // ~18px
-@font-size-h5:            @font-size-base;  // ~10px
-@font-size-h6:            @font-size-base * 0.85; // ~godknows
+@font-p : @font-size-base;
 
 // Font weights
 @font-light:  100;
 @font-medium: 500;
 @font-bold:   700;
 
-// layout
-@wrapper-max: 110rem;
-
 // override default root browser settings, like highlig color
-/* perhaps moving this to theme.less would be a good idea */
 @selectionColor: @white;
 @selectionBackgroundColor: rgb(123, 70, 232);
