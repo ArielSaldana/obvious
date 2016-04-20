@@ -111,66 +111,60 @@
     }
 }
 
-// this is the default..no point?
-.show-xs {
-    
+
+.hidden-xs-up {
+    display: none !important;
 }
 
-.show-sm {
-    display:none;
+.hidden-xs-down {
+    @media @max-xs {
+        display: none !important;
+    }
+}
+
+.hidden-sm-up {
     @media @min-sm {
-        display:inherit;
+        display: none !important;
     }
 }
 
-.show-md {
-    display:none;
+.hidden-sm-down {
+    @media @max-sm {
+        display: none !important;
+    }   
+}
+
+.hidden-md-up {
     @media @min-md {
-        display:inherit;
+        display: none !important;
     }
 }
 
-.show-lg {
-    display:none;
+.hidden-md-down {
+    @media @max-md {
+        display: none !important;
+    }
+}
+
+.hidden-lg-up {
     @media @min-lg {
-        display:inherit;
+        display: none !important;
     }
 }
 
-.show-xl {
-    display:none;
-    @media @min-xl {
-        display:inherit;
+.hidden-lg-down {
+    @media @max-lg {
+        display: none !important;
     }
 }
 
-.hide-xs {
-    
+.show {
+  display: block !important;
 }
-
-.hide-sm {
-    @media @min-sm {
-       display:none; 
-    }
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
 }
-
-.hide-md {
-    @media @min-md {
-       display:none; 
-    }
+.invisible {
+  visibility: hidden;
 }
-
-.hide-lg {
-    @media @min-lg {
-       display:none; 
-    }
-}
-
-
-// hide / show 
-/*
- * - hide-ms should hide content sized ms and greater
- *
- *
- */
-
