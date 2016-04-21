@@ -48,11 +48,39 @@
     .clearfix();
 }
 
+.table-row {
+    @media @min-sm {
+        display: table;
+        table-layout: fixed;
+        width:100%;
+    }
+}
+
+.table-row [class^="col-"] {
+    @media @min-sm {
+        display: table-cell;
+        float: none;
+        vertical-align: middle;
+    }
+}
+
+.table-row .top {
+    vertical-align: top;
+}
+
+.table-row .bottom {
+    vertical-align: bottom;
+}
+
 .wrapper {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+[class^="col-"].right {
+    float:right;
 }
 
 // loop function 
