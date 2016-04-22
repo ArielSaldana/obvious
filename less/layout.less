@@ -21,8 +21,8 @@
     margin-left:@gutter;
     margin-bottom:@gutter;
     
-    padding-left: 1.5rem;
-    padding-right:1.5rem;
+    // padding-left: 1.5rem;
+    // padding-right:1.5rem;
     transition:all 0.3s linear;
 }
 
@@ -56,6 +56,8 @@
     }
 }
 
+
+
 .table-row [class^="col-"] {
     @media @min-sm {
         display: table-cell;
@@ -70,6 +72,30 @@
 
 .table-row .bottom {
     vertical-align: bottom;
+}
+
+.flex-row {
+    @media @min-sm {
+        display:flex;
+    }
+}
+
+.flex-row [class^="col-"] {
+    align-self: center;
+}
+
+.flex-row [class^="col-"].top {
+    align-self: flex-start;
+}
+
+.flex-row [class^="col-"].bottom {
+    align-self: flex-end;
+}
+
+.flex-row.reverse {
+    @media @min-sm {
+        flex-direction: row-reverse;
+    }
 }
 
 .wrapper {
